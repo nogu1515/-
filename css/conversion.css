@@ -1,10 +1,15 @@
 h1 {
     text-align: center;
+    font-family: BIZ UDPゴシック;
 }
 #th_text {
     text-align: left;
 }
+#btn {
+    text-align: right;
+}
 .button {
+    font-family: BIZ UDPゴシック;
     display       : inline-block;
     font-size     : 13pt;        /* 文字サイズ */
     text-align    : center;      /* 文字位置   */
