@@ -7,11 +7,20 @@ h1 {
 .top_tb {
     padding-left: 200px;
 }
+.tb_bg {
+    background-color:greenyellow;
+}
 #th_text {
     text-align: left;
 }
 #btn {
     text-align: right;
+}
+.input_csv {
+    resize: none;
+}
+.output_json {
+    resize: none;
 }
 .button {
     font-family: BIZ UDPゴシック;
@@ -27,6 +36,6 @@ h1 {
     border        : 2px solid #00cc99;    /* 枠の指定 */
 }
 .button:hover {
-    border        : 2px solid #00ff99;    /* 枠の指定 */
-    background    : #00ff99;     /* 文字色     */
+    border        : 2px solid #00e7ad;    /* 枠の指定 */
+    background    : #00e7ad;     /* 文字色     */
 }
