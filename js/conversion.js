@@ -1,6 +1,6 @@
 // JavaScript
 // イベントハンドラ（ファイルがドロップされたら起動する）
-function loadedEkidata(event) {
+function conversion(event) {
     event.preventDefault();
     var res = event.target.result;
     var d = res.split('\n'); // 1行ごとに分割
