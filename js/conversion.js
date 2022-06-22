@@ -1,36 +1,21 @@
-// JavaScript
-// イベントハンドラ（ファイルがドロップされたら起動する）
-function conversion(event) {
-    event.preventDefault();
-    var res = event.target.result;
-    var d = res.split('\n'); // 1行ごとに分割
-    var jsonArray = csv2json(d); // JSON形式に変換
-}
+// Form要素を取得
+var form = document.forms.inputform;
 
-function csv2json(csvArray) {
-    var jsonArray = [];
+// ファイルが読み込まれた時の処理
+form.inputfile.addEventListener('change', function(e) {
+    // 読み込んだファイル情報を取得
+    var result = e.target.files[0];
 
-    // 1行目から「項目名」の配列を生成
-    var items = csvArray[0].split(',');
+    // FileReaderのインスタンス生成
+    var reader = new FileReader();
 
-    // CSVデータの配列の各行をループ処理
-    //// 配列の先頭要素（行）は項目名のための処理対象外
-    //// 配列の最終要素（行）は空のため処理対象外
-    for (var i = 1; i < csvArray.length - 1; i++) {
-        var a_line = new Object();
+    // 読み込んだファイルの中身を取得
+    reader.readAsText(result);
 
-        // カンマで区切られた各データに分割
-        var csvArrayD = csvArray[i].split(',');
+    // ファイルの中身を取得後に処理
+    reader.addEventListener('load', function() {
 
-        //// 各データをループ処理
-        for (var j = 0; j < items.length; j++) {
-            
-            // 要素名：items[j]
-            // データ：csvArrayD[j]
-            a_line[items[j]] = csvArray[j];
-        }
-        jsonArray.push(a_line);
-    }
-    // console.debug(jsonArray);
-    return jsonArray;
-}
+        // ファイルの中身をテキストエリアに表示
+        form.output_csv.textContent = reader.result;
+    })
+})
