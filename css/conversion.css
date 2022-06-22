@@ -1,19 +1,24 @@
+body {
+    background-image: url(../image/bg6.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
 h1 {
     font-family: BIZ UDPゴシック;
 }
-.bottom {
-    padding: 30px 0px 30px 0px;
-}
-.top_tb {
-    padding-left: 200px;
+textarea {
+    resize: none;
 }
 .tb_bg {
-    background-color:greenyellow;
+    background-color: #00e7ad;
 }
 #th_text {
     text-align: left;
 }
-#btn {
+#btn1 {
+    text-align: right;
+}
+#btn2 {
     text-align: right;
 }
 .input_csv {
@@ -22,20 +27,24 @@ h1 {
 .output_json {
     resize: none;
 }
-.button {
+.btn-solid {
     font-family: BIZ UDPゴシック;
-    display       : inline-block;
-    font-size     : 13pt;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px 4px 5px;   /* 余白       */
-    background    : #00cc99;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    line-height   : 1em;         /* 1行の高さ  */
-    transition    : .3s;         /* なめらか変化 */
-    border        : 2px solid #00cc99;    /* 枠の指定 */
-}
-.button:hover {
-    border        : 2px solid #00e7ad;    /* 枠の指定 */
-    background    : #00e7ad;     /* 文字色     */
+    color: #fff;
+    border-top: 4px solid #48ecc4;
+    border-right: 4px solid #0a5f4a;
+    border-bottom: 4px solid #0f745b;
+    border-left: 4px solid #8cf9de;
+    border-radius: 0;
+    background: #11a37f;
+    padding: 5px 5px 5px 5px;
+  }
+  
+.btn-solid:hover {
+    font-family: BIZ UDPゴシック;
+    color: #fff;
+    border-top: 4px solid #0f745b;
+    border-right: 4px solid #8cf9de;
+    border-bottom: 4px solid #48ecc4;
+    border-left: 4px solid #0a5f4a;
+    padding: 5px 5px 5px 5px;
 }
