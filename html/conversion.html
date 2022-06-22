@@ -10,9 +10,9 @@
     </head>
     <body>
         <div class="tb_bg">
-            <table class="top_tb">
+            <table class="top_tb" align="center">
                 <tr>
-                    <th><h1>CSVをJSONに変換</h1></th>
+                    <th><h1>CSV to JSON Online Converter</h1></th>
                     <th>
                         <img src="../image/csv_image.png" width="64" height="64">
                         <img src="../image/yajirushi.png" width="64" height="64">
@@ -22,46 +22,49 @@
             </table>
         </div>
 
-        <hr>
+        <hr><br>
+
+        <!-- <form name="fileform">
+            <input name="input_file" type="file"><br>
+            <textarea name="output" cols="100" rows="20"></textarea>
+        </form> -->
 
         <table align="center">
-            <tr><th id="th_text">- 入力 -</th></tr>
             <tr>
-                <td id="input_file">
-                    <div>
-                        <input type="file">
-                    </div>
+                <td colspan="2">
+                    <form name="inputform">
+                        <input name="input_file" type="file"><br>
+                        <textarea name="output_csv" cols="120" rows="20" placeholder="csvを入力かファイルを選択してね(⋈◍＞◡＜◍)。✧♡"></textarea>
+                    </form>
                 </td>
+            </tr>
+            <tr>
+                <td id="btn1">
+                    <button class="btn btn-solid" id="henkan">変換</button>
+                    <button class="btn btn-solid" id="clear">クリア</button>
+                </td>
+                
+            </tr>
+        </table>
+        <br>
+        <table align="center">
+            <tr>
+                <th id="th_text">出力結果</th>
             </tr>
             <tr>
                 <td>
-                    <textarea class="input_csv" id="input_csv2" cols="150" rows="20" placeholder="csvを入力してください"></textarea>
+                    <form name="outputform">
+                        <textarea name="output_ison" cols="120" rows="20" disabled></textarea>
+                    </form>
                 </td>
             </tr>
             <tr>
-                <td id="btn">
-                    <button class="button" id="henkan">変換</button>
-                    <button class="button" id="clear">クリア</button>
+                <td id="btn2">
+                    <button class="btn btn-solid" id="dl">ダウンロード</button>
+                    <button class="btn btn-solid" id="copy">コピー</button>
                 </td>
             </tr>
         </table>
-
-        <br><br>
-
-        <table align="center">
-            <tr><th id="th_text">- 出力 -</th></tr>
-            <tr>
-                <td>
-                    <textarea class="output_json" id="output_json2" cols="150" rows="20" disabled></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td id="btn">
-                    <button class="button" id="dl">ダウンロード</button>
-                    <button class="button" id="copy">コピー</button>
-                </td>
-            </tr>
-        </table>
-        <div class="bottom"></div>
+        <br><br><br>
     </body>
 </html>
