@@ -9,40 +9,44 @@
         <title>csv変換ツール</title>
     </head>
     <body>
-        <div class="tb_bg">
-            <table class="top_tb" align="center">
-                <tr>
-                    <th><h1>CSV to JSON Online Converter</h1></th>
-                    <th>
-                        <img src="../image/csv_image.png" width="64" height="64">
-                        <img src="../image/yajirushi.png" width="64" height="64">
-                        <img src="../image/json_icon.png" width="64" height="64">
-                    </th>
-                </tr>
-            </table>
-        </div>
+        <table align="center">
+            <tr>
+                <th>
+                    <div class="title">CSV to JSON Online Converter</div>
+                </th>
+                <th>
+                    <img src="../image/csv_image.png" width="64" height="64">
+                    <img src="../image/yajirushi.png" width="64" height="64">
+                    <img src="../image/json_icon.png" width="64" height="64">
+                </th>
+            </tr>
+        </table>
 
         <br><br>
 
         <table align="center">
             <tr>
                 <td colspan="2">
-                    <form name="inputform">
+                    <form name="conform">
                         <input id="file" type="file" accept=".csv"><br>
-                        <textarea id="text" name="text2" cols="120" rows="30"></textarea>
+                        <textarea id="text" cols="120" rows="30"></textarea>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button type="button" onclick="formclear()" class="btn btn-solid">クリア</button>
+                    <button type="button" onclick="formReset()" class="btn btn-solid">クリア</button>
                 </td>
-                <td id="btn1">
+                <td class="btn1">
                     <button class="btn btn-solid" id="dl">ダウンロード</button>
                     <button class="btn btn-solid" id="copy">コピー</button>
                 </td>
             </tr>
         </table>
-        <br><br><br>
+        <script>
+            function formReset() {
+                document.conform.reset();
+            }
+        </script>
     </body>
 </html>
