@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/conversion.css">
+        <!-- <link rel="stylesheet" href="../js/conversion.js"> -->
+        <title>csv変換ツール</title>
+    </head>
+    <body>
+        <div class="tb_bg">
+            <table class="top_tb" align="center">
+                <tr>
+                    <th><h1>CSV to JSON Online Converter</h1></th>
+                    <th>
+                        <img src="../image/csv_image.png" width="64" height="64">
+                        <img src="../image/yajirushi.png" width="64" height="64">
+                        <img src="../image/json_icon.png" width="64" height="64">
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <br><br>
+
+        <table align="center">
+            <tr>
+                <td colspan="2">
+                    <form name="inputform">
+                        <input id="file" type="file" accept=".csv"><br>
+                        <textarea id="text" name="text2" cols="120" rows="30"></textarea>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="formclear()" class="btn btn-solid">クリア</button>
+                </td>
+                <td id="btn1">
+                    <button class="btn btn-solid" id="dl">ダウンロード</button>
+                    <button class="btn btn-solid" id="copy">コピー</button>
+                </td>
+            </tr>
+        </table>
+        <br><br><br>
+    </body>
+</html>
