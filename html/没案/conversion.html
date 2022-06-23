@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/conversion.css">
+        <!-- <link rel="stylesheet" href="../js/conversion.js"> -->
+        <title>csv変換ツール</title>
+    </head>
+    <body>
+        <div class="tb_bg">
+            <table class="top_tb" align="center">
+                <tr>
+                    <th><h1>CSV to JSON Online Converter</h1></th>
+                    <th>
+                        <img src="../image/csv_image.png" width="64" height="64">
+                        <img src="../image/yajirushi.png" width="64" height="64">
+                        <img src="../image/json_icon.png" width="64" height="64">
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <br><br>
+
+        <!-- <form name="fileform">
+            <input name="input_file" type="file"><br>
+            <textarea name="output" cols="100" rows="20"></textarea>
+        </form> -->
+
+        <table align="center">
+            <tr>
+                <td colspan="2">
+                    <form name="inputform">
+                        <input id="file" type="file" accept=".csv"><br>
+                        <textarea id="text" name="text2" cols="120" rows="20"></textarea>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td id="btn1">
+                    <button class="btn btn-solid" id="henkan">変換</button>
+                    <button type="button" onclick="formclear()" class="btn btn-solid">クリア</button>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table align="center">
+            <tr>
+                <th id="th_text">出力結果</th>
+            </tr>
+            <tr>
+                <td>
+                    <form name="outputform">
+                        <textarea name="outputjson" cols="120" rows="20" disabled></textarea>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td id="btn2">
+                    <button class="btn btn-solid" id="dl">ダウンロード</button>
+                    <button class="btn btn-solid" id="copy">コピー</button>
+                </td>
+            </tr>
+        </table>
+
+        <br><br><br>
+
+        <script>
+            var ele = document.getElementById('file'); // input要素オブジェクトの取得
+        
+            // ファイルが選択されたら引数の関数を実行
+            ele.addEventListener("change", function(ev) {
+                var file = ev.target.files;
+                var reader = new FileReader();
+                reader.readAsText(file[0]);
+        
+                reader.onload = function(e){
+                    document.getElementById('text').innerHTML = reader.result;
+                }
+            }, false);
+
+            function formclear() {
+                document.file.reset();
+            }
+
+            function formclear() {
+                var reset_target = document.getElementById("text");
+                if(reset_target.value == '') {
+                    alert('すでにリセットされています。');
+                } else {
+                    reset_target.value = '';
+                }
+            }
+        </script>
+    </body>
+</html>
