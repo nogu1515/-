@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>練習</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form name="myform">
+            <input name="myfile" type="file" /><br/>
+            <textarea name="output" cols="80" rows="10"></textarea>
+        </form>
+        <script>
+            var form = document.forms.myform;
+
+            form.myfile.addEventListener( 'change', function(e) {
+                var result = e.target.files[0];
+            
+                //FileReaderのインスタンスを作成する
+                var reader = new FileReader();
+            
+                //読み込んだファイルの中身を取得する
+                reader.readAsText( result );
+            
+                //ファイルの中身を取得後に処理を行う
+                reader.addEventListener( 'load', function() {
+                
+                    //ファイルの中身をtextarea内に表示する
+                    form.output.textContent = reader.result;    
+                })
+            })
+
+            var results = e.target.files;         //複数ファイルのデータ
+            var end = e.target.files.length; //ファイル数
+                  
+            //すべてのファイルを読み込む
+            for(var i=0; i<end; i++) {
+                var reader = new FileReader();
+            
+                reader.readAsText( results[i] );
+                reader.addEventListener('load', function(e) {
+                    console.log( e.target.result );
+                })
+            }
+        </script>
+
+        <a id="btn" type="button" download="sample.json">ダウンロード</a>
+            
+        <script>
+            const btn = document.getElementById('btn');
+
+            btn.addEventListener('click', function() {
+                const blob = new Blob(['Hello!!'], { "type" : "text/json"
+            });
+            btn.href = window.URL.createObjectURL(blob);   
+        })
+        /*
+        //Form要素を取得する
+        var form = document.forms.myform;
+        
+        //ファイルが読み込まれた時の処理
+        form.myfile.addEventListener('change', function(e) {
+        
+            //ここにファイル取得処理を書く
+        
+        })
+
+        var form = document.forms.myform;
+        form.myfile.addEventListener( 'change', function(e) {
+
+            //読み込んだファイル情報を取得
+            var result = e.target.files;
+            console.log( result );
+        })
+        */
+      </script> 
+    </body>
+</html>
