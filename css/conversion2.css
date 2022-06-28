@@ -1,0 +1,41 @@
+body {
+    background-color: gainsboro;
+}
+.title {
+    font-family: BIZ UDPゴシック;
+    font-size: 40px;
+    color: #00e7ad;
+    text-shadow:1px 1px 0 #000, -1px -1px 0 #000,
+              -1px 1px 0 #000, 1px -1px 0 #000,
+              0px 1px 0 #000,  0-1px 0 #000,
+              -1px 0 0 #000, 1px 0 0 #000;
+}
+textarea {
+    resize: none;
+}
+.btn1 {
+    text-align: right;
+}
+.btn-solid {
+    font-family: BIZ UDPゴシック;
+    font-weight: bold;
+    color: #fff;
+    border-top: 4px solid #48ecc4;
+    border-right: 4px solid #0a5f4a;
+    border-bottom: 4px solid #0f745b;
+    border-left: 4px solid #8cf9de;
+    border-radius: 0;
+    background: #11a37f;
+    padding: 8px 8px 8px 8px;
+}
+  
+.btn-solid:hover {
+    font-family: BIZ UDPゴシック;
+    font-weight: bold;
+    color: #fff;
+    border-top: 4px solid #0f745b;
+    border-right: 4px solid #8cf9de;
+    border-bottom: 4px solid #48ecc4;
+    border-left: 4px solid #0a5f4a;
+    padding: 8px 8px 8px 8px;
+}
